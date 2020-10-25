@@ -3,4 +3,4 @@ IZGLED MENIJA:
 
 
 
-![](screenshot/Snimak%20ekrana%20(6).png)
+![](screenshot/Snimak%20ekrana%20(6).png=250x250)
