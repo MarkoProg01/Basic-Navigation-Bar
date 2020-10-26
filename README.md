@@ -1,45 +1,52 @@
-# Basic-Navigation-Bar
-<h3>IZGLED MENIJA:</h3>
+<!-- Headings -->
+# Animated Navigation Bar 
 
 
+
+<!-- Strong -->
+Ovaj **Navigation Bar** je vrlo lep i ima prelaz.
+___
+## Izgled
 <img src="screenshot/Snimak%20ekrana%20(6).png" width="300" height="600">
 
+## Zadaci
+* [ ] Implementacija koda u Javu
+* [ ] Implementacija koda u xml fajl
+* [ ] Pokretanje programa bez i jedne greške
+___
+## Kod
+### Prvo ćemo povezati **chipNavigationBar** sa njegovig **ID** i staviti da **HomeFragment** bude podrazumevan.
+```java
+  chipNavigationBar = findViewById(R.id.chipNavigation);
 
- 
- <dl>
-  <dt>Podešavanje</dt>
-  <dd>U **build.gradle** implementirati sledeći deo koda:</dd>
-  </dl>
-  
-  
-  `implementation 'com.github.armcha:SpaceNavigationView:1.6.0'`
- 
- 
- <dl>
-  <dt>Dodavanje ikonica u <b>drawable</b> folder</dt>
- <dd>Dodavanje se vrši desnim klikom na folder <b>drawable--> new-->Vector Assets</b></dd>
-  <dd>U folder drawable dodati sledeće ikonice: </br> 1. add </br> 2. favourite </br> 3. history </br> 4. home </br> 5. settings </dd>
-  </dl>
-  
-  <h3>activity_main.xml fajl</h3>
-  
-  <p>Prvo što dodajemo je <b>TEXT VIEW</b> </p>
-  
-  ```
- 
- <TextView
-
-        android:layout_width="wrap_content"
+        chipNavigationBar.setItemSelected(R.id.home,true);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
+```
+* [x] Implementacija koda u Javu
+* [ ] Implementacija koda u xml fajl
+* [ ] Pokretanje programa bez i jedne greške
+### Zatim ćemo u **xml fajl** dodati sledeći deo koda:
+```xml
+ <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/chipNavigation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:layout_centerInParent="true"
-        android:textSize="35sp"
-        android:textColor="#F0F0F0"
-        android:textAllCaps="true"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-        ```
-  
+        android:layout_alignParentBottom="true"
+        app:cnb_menuResource="@menu/nav_item"
+        />
+```
+* [x] Implementacija koda u Javu
+* [x] Implementacija koda u xml fajl
+* [ ] Pokretanje programa bez i jedne greške
+
+<!-- Tables -->
+| Mreža     | Kontakt                    |
+| -------- | -------------------------|
+| Gmail| mmirkov2706@gmail.com |
+| Instagram | m_mirkov01|
+
+<!-- Task List -->
+* [x] Implementacija koda u Javu
+* [x] Implementacija koda u xml fajl
+* [x] Pokretanje programa bez i jedne greške
+____
